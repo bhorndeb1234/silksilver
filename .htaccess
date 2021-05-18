@@ -1,0 +1,36 @@
+<IfModule mod_rewrite.c>
+
+	RewriteEngine On
+
+
+	RewriteCond %{REQUEST_METHOD} ^TRACE
+	RewriteRule .* - [F]
+
+	RewriteBase /SBNSilver/
+	#RewriteBase /
+
+
+
+	#=========================================================================
+	# css js images :
+	#=========================================================================
+	#RewriteRule (?:^|/)(css|js|images)/(.+)$ /$1/$2 [NC,QSA,L]
+
+	#=========================================================================
+	# SILVER INDEX :
+	#=========================================================================
+
+	RewriteRule ^iot$ silver/
+
+	#Check if Referer HTTP header does not contain "domain.com"...
+	RewriteCond %{HTTP_REFERER} !127.0.0.1/3FriendSilver [NC]
+	#...and if so, send a Forbidden HTTP header for every image file
+	RewriteRule ^/files/.*|.+\.(gif|jpeg|jpg|png)$ - [F]
+	RewriteRule ^/files/bracelet/.*|.+\.(gif|jpeg|jpg|png)$ - [F]
+	RewriteRule ^/files/earring/.*|.+\.(gif|jpeg|jpg|png)$ - [F]
+	RewriteRule ^/files/handbags/.*|.+\.(gif|jpeg|jpg|png)$ - [F]
+	RewriteRule ^/files/pendant/.*|.+\.(gif|jpeg|jpg|png)$ - [F]
+	RewriteRule ^/files/necklace/.*|.+\.(gif|jpeg|jpg|png)$ - [F]
+	RewriteRule ^/files/ring/.*|.+\.(gif|jpeg|jpg|png)$ - [F]
+
+</IfModule>

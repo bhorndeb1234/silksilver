@@ -1,0 +1,1 @@
+<?php $bInc=isset($bInc)?$bInc:0; if(!$bInc) exit("<div class='alert alert-danger' role='alert' style='text-align:center;'><i class='fa fa-warning fa-lg'></i> Direct Access not Permitted !!!.</div>");  ?>
