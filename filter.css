@@ -1,0 +1,29 @@
+.navbar-filter {
+	background: -webkit-linear-gradient(#FFF,#FCFCFC,#F8F8F8,#F0F0F0);
+	background: -o-linear-gradient(#FFF,#FCFCFC,#F8F8F8,#F0F0F0);
+	background: -moz-linear-gradient(#FFF,#FCFCFC,#F8F8F8,#F0F0F0);
+	background: linear-gradient(#FFF,#FCFCFC,#F8F8F8,#F0F0F0);
+  	border-color: #e7e7e7;
+	border-top:0;
+}
+
+.navbar-filter .hor-default{ margin:0 auto; padding:0px; text-align:center; }
+.navbar-filter .hor-default .hor-list{ 
+	margin:3px;padding:5px; vertical-align:middle;
+	display:-moz-inline-stack; display:inline-block; zoom:1; *display:inline;
+}
+
+
+
+.navbar-filter .hor-default .hor-list .model_nm{ width:260px;}
+
+
+
+
+
+
+
+
+/*= Auto Complete */
+.typeahead,.tt-query,.tt-hint { padding: 8px 12px; text-align:left; outline: none;}
+
